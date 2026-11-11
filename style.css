@@ -849,6 +849,39 @@ svg { display: block; }
   color: #fff4ee;
 }
 
+/* Closing surprise (opens the sakura tree in a new tab) */
+.last-surprise { margin-top: 2.4rem; }
+.last-surprise p {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #fbe3dc;
+}
+.surprise-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  min-height: 48px;
+  margin-top: .7rem;
+  padding: .8rem 1.4rem .8rem 1.1rem;
+  border: 1px solid rgba(251, 240, 231, .85);
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 3px var(--rose), inset 0 0 0 4px rgba(251, 240, 231, .45);
+  font-family: var(--serif-jp);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ivory);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .35s var(--ease), color .35s var(--ease), transform .35s var(--ease);
+}
+.surprise-btn svg { width: 1.2rem; height: 1.2rem; color: #fbe3dc; transition: transform .9s var(--ease); }
+.surprise-btn:hover { background-color: rgba(251, 240, 231, .14); }
+.surprise-btn:hover svg, .surprise-btn:focus-visible svg { transform: rotate(72deg); }
+.surprise-btn:active { transform: scale(.97); }
+.details .surprise-btn:focus-visible { outline-color: var(--ivory); }
+
 /* Hidden rabbit */
 .usagi {
   position: absolute;
