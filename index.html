@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ocha Party · A Morning of Tea &amp; Togetherness</title>
+<meta name="description" content="A little Japanese corner for guests of Ocha Party, 14 November 2026, Phalguni Hall.">
+<meta name="theme-color" content="#c47f86">
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Shippori+Mincho+B1:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Shared drawings -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="sakura" viewBox="-15 -15 30 30">
+      <g fill="currentColor">
+        <path id="sk-p" d="M0 0C-4.6-3.6-5.8-9.4-2.6-12.6L0-10.6 2.6-12.6C5.8-9.4 4.6-3.6 0 0Z"/>
+        <use href="#sk-p" transform="rotate(72)"/>
+        <use href="#sk-p" transform="rotate(144)"/>
+        <use href="#sk-p" transform="rotate(216)"/>
+        <use href="#sk-p" transform="rotate(288)"/>
+      </g>
+      <g stroke="#b0605a" stroke-width=".7" stroke-linecap="round">
+        <path d="M0 0V-5M0 0L4.8-1.5M0 0L3 4M0 0L-3 4M0 0L-4.8-1.5"/>
+      </g>
+      <circle r="1.7" fill="#c46b62"/>
+    </symbol>
+    <symbol id="bud" viewBox="-6 -8 12 14">
+      <path d="M0 5C-3.4 2.4-3.6-2.6 0-6.6 3.6-2.6 3.4 2.4 0 5Z" fill="currentColor"/>
+      <path d="M-2 4.4L0 6 2 4.4" stroke="#7c5a3c" stroke-width=".8" fill="none"/>
+    </symbol>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.6"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- Ambient music (generated live in the browser; starts only when tapped) -->
+<button class="music-btn" id="musicBtn" type="button" aria-pressed="false" aria-label="Play soft ambient music" hidden>
+  <svg class="music-note" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17.5V5.5l10-2v12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="6.6" cy="17.6" rx="2.6" ry="2" fill="currentColor"/><ellipse cx="16.6" cy="15.6" rx="2.6" ry="2" fill="currentColor"/></svg>
+  <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
+
+<!-- ============ LANDING ============ -->
+<header class="landing" id="top">
+  <div class="petal-fall" aria-hidden="true"></div>
+
+  <div class="tearoom" aria-hidden="true">
+    <!-- Shoji window with a cherry branch's shadow falling on the paper -->
+    <svg class="shoji-window" viewBox="0 0 300 360">
+      <defs>
+        <radialGradient id="morning" cx="28%" cy="18%" r="85%">
+          <stop offset="0" stop-color="#fff7ef"/>
+          <stop offset=".55" stop-color="#fbeae0"/>
+          <stop offset="1" stop-color="#f1d6cb"/>
+        </radialGradient>
+        <clipPath id="paper-clip"><rect x="14" y="14" width="272" height="332"/></clipPath>
+      </defs>
+      <rect x="4" y="4" width="292" height="352" rx="2" fill="#6e4a3d"/>
+      <rect x="14" y="14" width="272" height="332" fill="url(#morning)"/>
+      <g clip-path="url(#paper-clip)">
+        <g class="branch-shadow" filter="url(#soft-shadow)" fill="#8a5448" stroke="#8a5448" stroke-linecap="round">
+          <path d="M300 60C250 72 214 92 186 120S136 170 92 186" fill="none" stroke-width="7" opacity=".9"/>
+          <path d="M214 96C204 74 210 52 226 36M168 140C150 128 120 126 98 134M128 170C122 196 128 220 142 236M250 74C258 100 254 124 240 146" fill="none" stroke-width="3.4"/>
+          <g stroke="none">
+            <circle cx="226" cy="34" r="11"/><circle cx="238" cy="44" r="8"/><circle cx="214" cy="46" r="7"/>
+            <circle cx="98" cy="132" r="10"/><circle cx="88" cy="146" r="7"/><circle cx="110" cy="124" r="6"/>
+            <circle cx="142" cy="238" r="11"/><circle cx="130" cy="248" r="7"/><circle cx="154" cy="230" r="6"/>
+            <circle cx="240" cy="148" r="10"/><circle cx="252" cy="158" r="7"/>
+            <circle cx="92" cy="188" r="9"/><circle cx="80" cy="182" r="6"/><circle cx="186" cy="118" r="6"/>
+          </g>
+        </g>
+        <rect class="light-shaft" x="-60" y="0" width="120" height="420" fill="#fffaf2" transform="rotate(-24 0 0)"/>
+      </g>
+      <!-- kumiko lattice -->
+      <g stroke="#7a5143" fill="none">
+        <path d="M82 14V346M150 14V346M218 14V346" stroke-width="3"/>
+        <path d="M14 80H286M14 146H286M14 212H286M14 278H286" stroke-width="2.4"/>
+        <path d="M14 240H286" stroke-width="5"/>
+      </g>
+      <rect x="4" y="4" width="292" height="352" rx="2" fill="none" stroke="#5a3a2f" stroke-width="2"/>
+    </svg>
+
+    <!-- Blossoming branch in front of the window -->
+    <svg class="front-branch" viewBox="0 0 260 210">
+      <g fill="none" stroke="#5b3b31" stroke-linecap="round">
+        <path d="M262 18C222 26 188 44 160 70S108 116 60 126" stroke-width="6"/>
+        <path d="M190 48C182 30 186 14 198 4M150 80C136 92 132 110 136 128M110 106C96 96 74 94 54 100M214 32C228 48 230 66 224 82" stroke-width="2.6"/>
+        <path d="M60 126C44 130 30 140 22 152M136 128C140 142 150 150 162 154" stroke-width="1.6"/>
+      </g>
+      <g class="blooms">
+        <use href="#sakura" x="186" y="-8" width="26" height="26" style="color:#f2bcc0"/>
+        <use href="#sakura" x="206" y="10" width="20" height="20" style="color:#eba6ad"/>
+        <use href="#sakura" x="214" y="74" width="24" height="24" style="color:#f4c6c8"/>
+        <use href="#sakura" x="122" y="118" width="28" height="28" style="color:#eeb0b5"/>
+        <use href="#sakura" x="152" y="142" width="20" height="20" style="color:#f4c6c8"/>
+        <use href="#sakura" x="40" y="88" width="26" height="26" style="color:#f2bcc0"/>
+        <use href="#sakura" x="8" y="142" width="22" height="22" style="color:#eba6ad"/>
+        <use href="#sakura" x="96" y="98" width="18" height="18" style="color:#f6d0d0"/>
+        <use href="#sakura" x="156" y="56" width="20" height="20" style="color:#eeb0b5"/>
+        <use href="#bud" x="176" y="28" width="9" height="11" style="color:#e39aa2"/>
+        <use href="#bud" x="226" y="56" width="9" height="11" style="color:#e39aa2"/>
+        <use href="#bud" x="68" y="118" width="9" height="11" style="color:#e39aa2"/>
+        <use href="#bud" x="140" y="96" width="8" height="10" style="color:#e39aa2"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="welcome">
+    <p class="kanji-mark" lang="ja" aria-hidden="true">お茶会</p>
+    <h1 class="title">Ocha Party</h1>
+    <p class="subtitle">A Morning of Tea &amp; Togetherness</p>
+    <p class="hello">The kettle is warm. Come on in.</p>
+
+    <button class="enter-btn" id="enterBtn" type="button">
+      <svg class="enter-trace" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <rect x="1" y="1" width="98" height="98" pathLength="100" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <svg class="enter-flower" viewBox="0 0 30 30" aria-hidden="true"><use href="#sakura" width="30" height="30"/></svg>
+      <span class="enter-label">See the itinerary</span>
+    </button>
+  </div>
+
+  <svg class="teaset" viewBox="0 0 320 150" aria-hidden="true">
+    <ellipse cx="160" cy="136" rx="150" ry="7" fill="#b88274" opacity=".25"/>
+    <!-- steam -->
+    <g class="steam" fill="none" stroke="#8a6255" stroke-width="1.4" stroke-linecap="round">
+      <path class="s1" d="M232 74C224 62 240 56 232 44S236 26 230 16"/>
+      <path class="s2" d="M246 76C240 66 252 58 246 48S250 34 246 26"/>
+    </g>
+    <!-- wooden tray -->
+    <rect x="12" y="116" width="296" height="12" rx="3" fill="#7b5345"/>
+    <rect x="12" y="116" width="296" height="3" rx="1.5" fill="#9a6d5c"/>
+    <!-- kyusu teapot -->
+    <path d="M70 116C56 110 54 82 72 72C88 64 134 64 148 72C166 82 164 110 150 116Z" fill="#a2655a"/>
+    <path d="M147 84C158 82 165 74 170 62C171 58 177 57 179 60C176 76 168 94 151 101Z" fill="#94584d"/><ellipse cx="174.5" cy="59.5" rx="4.6" ry="2" fill="#7c463c" transform="rotate(-12 174.5 59.5)"/>
+    <path d="M71 92L38 80L35 86L68 101Z" fill="#6e3f35"/>
+    <ellipse cx="110" cy="70" rx="27" ry="6" fill="#8e5247"/>
+    <ellipse cx="110" cy="63" rx="6.5" ry="4.2" fill="#7c463c"/>
+    <path d="M78 84C84 76 96 73 108 73" fill="none" stroke="#f6e0d6" stroke-width="2" stroke-linecap="round" opacity=".35"/>
+    <use href="#sakura" x="114" y="86" width="18" height="18" style="color:#f1cfc7" opacity=".75"/>
+    <use href="#sakura" x="132" y="96" width="11" height="11" style="color:#f1cfc7" opacity=".6"/>
+    <!-- chawan with matcha -->
+    <path d="M200 84C202 106 214 116 238 116S274 106 276 84Z" fill="#efdccf"/>
+    <path d="M201 90C220 96 256 96 275 90L274 96C262 100 252 104 246 99C240 106 228 101 223 99C214 101 207 99 203 96Z" fill="#d98f8f" opacity=".55"/>
+    <ellipse cx="238" cy="84" rx="38" ry="7" fill="#e6cbbd"/>
+    <ellipse cx="238" cy="84.6" rx="33" ry="5" fill="#a9a67c"/>
+    <ellipse cx="232" cy="84" rx="12" ry="2" fill="#bcb98f" opacity=".8"/>
+    <!-- sakura wagashi on a little plate -->
+    <ellipse cx="292" cy="114" rx="17" ry="4" fill="#e9d2c6"/>
+    <use href="#sakura" x="281" y="96" width="22" height="22" style="color:#eda8ae"/>
+  </svg>
+
+  <a class="skip-link" href="#itinerary">Skip to the itinerary</a>
+</header>
+
+<!-- Shoji doors for the transition -->
+<div class="doors" aria-hidden="true">
+  <div class="door door-l"><span class="hikite"></span></div>
+  <div class="door door-r"><span class="hikite"></span></div>
+</div>
+
+<main class="world" id="world">
+
+  <!-- ============ ITINERARY ============ -->
+  <section class="itinerary" id="itinerary" aria-labelledby="itin-title">
+    <div class="section-head">
+      <p class="vertical-mark" lang="ja" aria-hidden="true">朝のひととき</p>
+      <h2 id="itin-title" tabindex="-1">Your Morning at a Glance</h2>
+      <p class="lede">Here’s a little glimpse of what’s waiting for you.</p>
+    </div>
+
+    <ol class="timeline">
+      <li class="stop">
+        <h3>
+          <button class="stop-btn" type="button" aria-expanded="false" aria-controls="p1" id="b1">
+            <span class="stop-num" lang="ja" aria-hidden="true">一</span>
+            <span class="stop-text">
+              <span class="stop-time">9:15 AM</span>
+              <span class="stop-title">Welcome &amp; Seating</span>
+            </span>
+            <svg class="stop-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 7H28M6 7V24M13.3 7V22M20.6 7V24M26 7V22" /><path d="M6 24C8 23 11 23 13.3 22M20.6 24C22.6 23 24.4 22.6 26 22"/><path d="M9.6 13.5l.6 1.4M23.2 13.5l.6 1.4" stroke-width="2"/></svg>
+            <span class="pm" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="stop-panel" id="p1" role="region" aria-labelledby="b1"><div><p>Arrive, find your place and settle into a lovely morning together.</p></div></div>
+      </li>
+
+      <li class="stop">
+        <h3>
+          <button class="stop-btn" type="button" aria-expanded="false" aria-controls="p2" id="b2">
+            <span class="stop-num" lang="ja" aria-hidden="true">二</span>
+            <span class="stop-text"><span class="stop-title">Introductions &amp; Partner Activity</span></span>
+            <svg class="stop-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 13H14L13 24C12.6 26 5.4 26 5 24Z"/><path d="M18 13H28L27 24C26.6 26 19.4 26 19 24Z"/><path d="M8 9C7 7.5 9 6.5 8 5M22 9C21 7.5 23 6.5 22 5"/></svg>
+            <span class="pm" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="stop-panel" id="p2" role="region" aria-labelledby="b2"><div><p>Time to meet someone new! Get to know the people around you through a fun introductory activity.</p></div></div>
+      </li>
+
+      <li class="stop">
+        <h3>
+          <button class="stop-btn" type="button" aria-expanded="false" aria-controls="p3" id="b3">
+            <span class="stop-num" lang="ja" aria-hidden="true">三</span>
+            <span class="stop-text"><span class="stop-title">Ocha Ceremony</span></span>
+            <svg class="stop-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 15H21C21 22 17.4 26 12 26S3 22 3 15Z"/><path d="M7.4 26.4H16.6"/><path d="M25.5 4V13M23 13C23 18 28 18 28 13Z"/><path d="M6 12C7 10.5 9 10.5 10 12"/></svg>
+            <span class="pm" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="stop-panel" id="p3" role="region" aria-labelledby="b3"><div><p>Experience the warmth and beauty of Japanese tea culture through a little tea ceremony experience.</p></div></div>
+      </li>
+
+      <li class="stop">
+        <h3>
+          <button class="stop-btn" type="button" aria-expanded="false" aria-controls="p4" id="b4">
+            <span class="stop-num" lang="ja" aria-hidden="true">四</span>
+            <span class="stop-text"><span class="stop-title">Questions Jar</span></span>
+            <svg class="stop-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M11 4H21V7H11Z"/><path d="M12 7C12 9 7 10 7 15V25C7 27 9 28 11 28H21C23 28 25 27 25 25V15C25 10 20 9 20 7"/><path d="M13.6 15.4C13.6 13.6 14.8 12.8 16 12.8S18.4 13.6 18.4 15.2C18.4 17 16 17 16 19.4"/><circle cx="16" cy="22.6" r=".6" fill="currentColor"/></svg>
+            <span class="pm" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="stop-panel" id="p4" role="region" aria-labelledby="b4"><div><p>A jar full of questions and conversations waiting to happen. Pick one, share your thoughts and discover something unexpected about each other.</p></div></div>
+      </li>
+
+      <li class="stop">
+        <h3>
+          <button class="stop-btn" type="button" aria-expanded="false" aria-controls="p5" id="b5">
+            <span class="stop-num" lang="ja" aria-hidden="true">五</span>
+            <span class="stop-text"><span class="stop-title">Anime &amp; Manga Quiz</span></span>
+            <svg class="stop-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 6H28V21H15L9 26V21H4Z"/><path d="M16 9.5L17.2 12.3 20.2 12.6 17.9 14.6 18.6 17.5 16 16 13.4 17.5 14.1 14.6 11.8 12.6 14.8 12.3Z"/></svg>
+            <span class="pm" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="stop-panel" id="p5" role="region" aria-labelledby="b5"><div><p>Think you know your anime and manga? Put your knowledge to the test in a little friendly competition!</p></div></div>
+      </li>
+
+      <li class="stop">
+        <h3>
+          <button class="stop-btn" type="button" aria-expanded="false" aria-controls="p6" id="b6">
+            <span class="stop-num" lang="ja" aria-hidden="true">六</span>
+            <span class="stop-text"><span class="stop-title">Memories, Mingling &amp; Souvenirs</span></span>
+            <svg class="stop-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 5H26V28H6Z"/><path d="M9 8H23V21H9Z"/><path d="M16 12.5C14.6 11.4 12.8 12.4 13.4 14.2 14 15.8 16 17.2 16 17.2S18 15.8 18.6 14.2C19.2 12.4 17.4 11.4 16 12.5Z"/></svg>
+            <span class="pm" aria-hidden="true"></span>
+          </button>
+        </h3>
+        <div class="stop-panel" id="p6" role="region" aria-labelledby="b6"><div><p>End the morning with conversations, photographs, laughter and a little something to take home as a memory.</p></div></div>
+      </li>
+    </ol>
+
+    <svg class="itin-sprig" viewBox="0 0 160 80" aria-hidden="true">
+      <path d="M4 70C40 62 74 46 100 22M58 52C66 40 80 34 92 34M100 22C110 14 124 10 136 12" fill="none" stroke="#6b4a3e" stroke-width="1.6" stroke-linecap="round"/>
+      <use href="#sakura" x="88" y="20" width="22" height="22" style="color:#eeb0b5"/>
+      <use href="#sakura" x="128" y="0" width="20" height="20" style="color:#f2bcc0"/>
+      <use href="#sakura" x="48" y="38" width="18" height="18" style="color:#f4c6c8"/>
+      <use href="#bud" x="88" y="28" width="7" height="9" style="color:#e39aa2"/>
+    </svg>
+  </section>
+
+  <!-- ============ THE LITTLE JAPANESE WORLD ============ -->
+  <section class="little-world" id="little-world" aria-labelledby="lw-title">
+    <svg class="kasumi" viewBox="0 0 240 30" aria-hidden="true"><g fill="#e8a191" opacity=".55"><rect x="20" y="4" width="120" height="6" rx="3"/><rect x="70" y="13" width="150" height="6" rx="3"/><rect x="0" y="22" width="90" height="5" rx="2.5"/></g></svg>
+    <div class="section-head">
+      <p class="vertical-mark" lang="ja" aria-hidden="true">小さな日本</p>
+      <h2 id="lw-title">The Little Japanese World</h2>
+      <p class="lede">Two small things to play with while the tea steeps.</p>
+    </div>
+
+    <!-- Find the sakura -->
+    <article class="corner" aria-labelledby="fs-title">
+      <div class="corner-head">
+        <h3 id="fs-title">Find the Sakura</h3>
+        <p>Five blossoms are hiding in this garden. Tap each one you spot.</p>
+      </div>
+
+      <div class="scene-wrap" id="sceneWrap">
+        <svg class="scene" id="scene" viewBox="0 0 360 280" role="group" aria-label="A garden scene with five hidden sakura flowers">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f6dcd4"/><stop offset="1" stop-color="#fbefe7"/>
+            </linearGradient>
+          </defs>
+          <rect width="360" height="280" fill="url(#sky)"/>
+          <circle cx="276" cy="58" r="28" fill="#f0b6a6" opacity=".45"/>
+          <g fill="#e8a191" opacity=".4"><rect x="210" y="70" width="110" height="6" rx="3"/><rect x="240" y="80" width="90" height="5" rx="2.5"/><rect x="18" y="96" width="70" height="5" rx="2.5"/></g>
+          <path d="M0 176C40 150 90 150 130 164S220 150 260 158 330 150 360 160V230H0Z" fill="#efd0c6"/>
+          <path d="M0 196C60 180 120 186 180 192S300 184 360 190V230H0Z" fill="#e7c0b5" opacity=".8"/>
+
+          <!-- bamboo fence -->
+          <g>
+            <g fill="#c9a079" stroke="#8a6448" stroke-width=".8">
+              <rect x="190" y="160" width="7" height="66" rx="2"/><rect x="200" y="164" width="7" height="62" rx="2"/>
+              <rect x="210" y="160" width="7" height="66" rx="2"/><rect x="220" y="164" width="7" height="62" rx="2"/>
+              <rect x="240" y="164" width="7" height="62" rx="2"/><rect x="250" y="160" width="7" height="66" rx="2"/>
+              <rect x="260" y="164" width="7" height="62" rx="2"/>
+            </g>
+          </g>
+
+          <!-- hidden flower 5 (between the fence canes) -->
+          <g transform="translate(233 188)"><g class="hs" data-i="4"><use href="#sakura" x="-10" y="-10" width="20" height="20"/></g></g>
+
+          <g fill="#c9a079" stroke="#8a6448" stroke-width=".8">
+            <rect x="230" y="160" width="7" height="66" rx="2"/>
+            <rect x="184" y="180" width="90" height="5" rx="2"/><rect x="184" y="204" width="90" height="5" rx="2"/>
+          </g>
+          <g stroke="#5b3b31" stroke-width="1.2"><path d="M200 182l6 6M240 206l6 6M216 182l-6 6"/></g>
+
+          <!-- cherry tree -->
+          <g fill="none" stroke="#5b3b31" stroke-linecap="round">
+            <path d="M52 230C58 190 46 150 64 116S96 70 104 40" stroke-width="10"/>
+            <path d="M70 110C100 96 130 70 172 56M90 76C76 60 54 54 30 58M104 44C114 30 132 22 150 22M160 60C176 62 190 72 196 84" stroke-width="4"/>
+          </g>
+          <g fill="#f1b9bd">
+            <circle cx="30" cy="54" r="15"/><circle cx="46" cy="44" r="12"/><circle cx="18" cy="70" r="10"/>
+            <circle cx="104" cy="34" r="16"/><circle cx="122" cy="22" r="13"/><circle cx="88" cy="26" r="11"/>
+            <circle cx="150" cy="20" r="13"/><circle cx="170" cy="30" r="11"/>
+            <circle cx="172" cy="54" r="14"/><circle cx="190" cy="66" r="11"/><circle cx="198" cy="86" r="9"/>
+            <circle cx="126" cy="70" r="12"/><circle cx="80" cy="92" r="11"/>
+          </g>
+          <g fill="#e9a3aa">
+            <circle cx="40" cy="62" r="7"/><circle cx="114" cy="40" r="8"/><circle cx="160" cy="40" r="7"/>
+            <circle cx="184" cy="56" r="6"/><circle cx="96" cy="18" r="6"/><circle cx="134" cy="78" r="6"/>
+          </g>
+          <!-- hidden flower 2 (in the branches) -->
+          <g transform="translate(147 62)"><g class="hs" data-i="1"><use href="#sakura" x="-10" y="-10" width="20" height="20"/></g></g>
+          <g fill="#f6d2d2">
+            <circle cx="24" cy="48" r="3"/><circle cx="110" cy="28" r="3"/><circle cx="176" cy="50" r="3"/><circle cx="84" cy="88" r="2.5"/>
+          </g>
+
+          <!-- hidden flower 3 (behind the lantern) -->
+          <g transform="translate(328 176)"><g class="hs" data-i="2"><use href="#sakura" x="-10" y="-10" width="20" height="20"/></g></g>
+
+          <!-- stone lantern -->
+          <g fill="#b7a79b" stroke="#6e5a4e" stroke-width="1">
+            <rect x="290" y="216" width="40" height="10" rx="2"/>
+            <rect x="303" y="176" width="14" height="40"/>
+            <rect x="292" y="168" width="36" height="8" rx="2"/>
+            <rect x="296" y="142" width="28" height="26"/>
+            <path d="M282 142C292 136 298 128 310 124 322 128 328 136 338 142Z"/>
+            <circle cx="310" cy="118" r="5"/>
+          </g>
+          <rect x="303" y="148" width="14" height="14" fill="#f3c98f" opacity=".75"/>
+          <path d="M310 148V162" stroke="#6e5a4e" stroke-width="1"/>
+
+          <!-- engawa veranda -->
+          <rect x="0" y="226" width="360" height="54" fill="#b68472"/>
+          <g stroke="#8f5f51" stroke-width="1"><path d="M0 238H360M0 252H360M0 266H360"/></g>
+          <rect x="0" y="224" width="360" height="4" fill="#8f5f51"/>
+
+          <!-- hidden flower 4 (corner of the veranda) -->
+          <g transform="translate(346 266)"><g class="hs" data-i="3"><use href="#sakura" x="-10" y="-10" width="20" height="20"/></g></g>
+
+          <!-- hidden flower 1 (tucked behind the teacup) -->
+          <g transform="translate(181 229)"><g class="hs" data-i="0"><use href="#sakura" x="-10" y="-10" width="20" height="20"/></g></g>
+
+          <!-- tray & teacup -->
+          <ellipse cx="166" cy="246" rx="38" ry="7" fill="#7b5345"/>
+          <ellipse cx="166" cy="244" rx="36" ry="6" fill="#94654f"/>
+          <path d="M152 222H180L178 240C177 244 155 244 154 240Z" fill="#efdccf" stroke="#9b6e5c" stroke-width=".8"/>
+          <path d="M153 228H179" stroke="#d98f8f" stroke-width="2.2" opacity=".6"/>
+          <ellipse cx="166" cy="222" rx="14" ry="2.6" fill="#a9a67c"/>
+
+          <!-- loose petals on the floor (decoys) -->
+          <g fill="#eeb3b6" opacity=".85">
+            <ellipse cx="60" cy="246" rx="4" ry="2.4" transform="rotate(20 60 246)"/>
+            <ellipse cx="236" cy="262" rx="4" ry="2.4" transform="rotate(-30 236 262)"/>
+            <ellipse cx="110" cy="270" rx="3.6" ry="2.2" transform="rotate(50 110 270)"/>
+            <ellipse cx="290" cy="244" rx="3.6" ry="2.2"/>
+          </g>
+
+          <!-- tap targets (drawn last so nothing blocks them) -->
+          <g class="hits">
+            <circle data-i="0" cx="178" cy="228" r="20" tabindex="0" role="button" aria-label="Hidden sakura near the teacup"/>
+            <circle data-i="1" cx="147" cy="62" r="20" tabindex="0" role="button" aria-label="Hidden sakura in the branches"/>
+            <circle data-i="2" cx="328" cy="176" r="20" tabindex="0" role="button" aria-label="Hidden sakura by the lantern"/>
+            <circle data-i="3" cx="346" cy="266" r="20" tabindex="0" role="button" aria-label="Hidden sakura in the corner"/>
+            <circle data-i="4" cx="233" cy="188" r="18" tabindex="0" role="button" aria-label="Hidden sakura in the fence"/>
+          </g>
+        </svg>
+        <div class="scene-magic" id="sceneMagic" aria-hidden="true"></div>
+      </div>
+
+      <div class="scene-bar">
+        <p class="counter" id="sakuraCount" aria-live="polite">Sakura found: <strong>0</strong>/5</p>
+        <button class="text-btn" id="hintBtn" type="button">Show me a hint</button>
+      </div>
+      <div class="found-all" id="foundAll" hidden>
+        <p>You found them all! A little sakura magic for you.</p>
+        <button class="text-btn" id="replayBtn" type="button">Hide them again</button>
+      </div>
+    </article>
+
+    <svg class="kasumi kasumi-mid" viewBox="0 0 240 30" aria-hidden="true"><g fill="#e8a191" opacity=".55"><rect x="60" y="4" width="140" height="6" rx="3"/><rect x="0" y="13" width="130" height="6" rx="3"/><rect x="110" y="22" width="110" height="5" rx="2.5"/></g></svg>
+
+    <!-- Doodle corner -->
+    <article class="corner" aria-labelledby="dd-title">
+      <div class="corner-head">
+        <h3 id="dd-title">A Little Space to Doodle</h3>
+        <p>Leave a little mark in our little corner of Japan.</p>
+      </div>
+
+      <div class="paper" id="paper">
+        <canvas id="doodle" aria-label="Drawing paper. Draw with your finger or mouse."></canvas>
+        <p class="paper-hint" id="paperHint" aria-hidden="true">draw here</p>
+      </div>
+
+      <div class="tools" role="toolbar" aria-label="Doodle tools">
+        <div class="swatches" role="radiogroup" aria-label="Ink colour">
+          <button type="button" class="swatch" role="radio" aria-checked="true" aria-label="Sumi brown" data-color="#4f342b" style="--c:#4f342b"></button>
+          <button type="button" class="swatch" role="radio" aria-checked="false" aria-label="Rosewood" data-color="#8e4f52" style="--c:#8e4f52"></button>
+          <button type="button" class="swatch" role="radio" aria-checked="false" aria-label="Vermilion" data-color="#c0563f" style="--c:#c0563f"></button>
+          <button type="button" class="swatch" role="radio" aria-checked="false" aria-label="Coral" data-color="#e28a76" style="--c:#e28a76"></button>
+          <button type="button" class="swatch" role="radio" aria-checked="false" aria-label="Sakura pink" data-color="#eaa2aa" style="--c:#eaa2aa"></button>
+        </div>
+        <div class="sizes" role="radiogroup" aria-label="Brush size">
+          <button type="button" class="size" role="radio" aria-checked="false" aria-label="Fine brush" data-size="2"><i style="--s:4px"></i></button>
+          <button type="button" class="size" role="radio" aria-checked="true" aria-label="Medium brush" data-size="5"><i style="--s:8px"></i></button>
+          <button type="button" class="size" role="radio" aria-checked="false" aria-label="Bold brush" data-size="11"><i style="--s:14px"></i></button>
+        </div>
+        <div class="actions">
+          <button type="button" class="tool-btn" id="undoBtn" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7L4 12L9 17M4 12H14C17.3 12 20 14.7 20 18"/></svg>Undo
+          </button>
+          <button type="button" class="tool-btn" id="clearBtn" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7H19M10 7V4H14V7M7 7L8 20H16L17 7"/></svg>Clear
+          </button>
+        </div>
+      </div>
+      <p class="fine-print">Your doodle stays on your device. Nothing is uploaded or saved.</p>
+    </article>
+  </section>
+
+  <!-- ============ EVENT DETAILS ============ -->
+  <footer class="details" aria-label="Event details">
+    <p class="details-jp" lang="ja" aria-hidden="true">お待ちしています</p>
+    <dl class="details-list">
+      <div><dt class="sr-only">Date</dt><dd>14 November 2026</dd></div>
+      <div><dt class="sr-only">Time</dt><dd>9:15 AM onwards</dd></div>
+      <div><dt class="sr-only">Venue</dt><dd>Phalguni Hall</dd></div>
+    </dl>
+    <p class="closing">We can’t wait to see you!</p>
+
+    <div class="usagi" id="usagi">
+      <p class="usagi-says" id="usagiSays" role="status" aria-live="polite"></p>
+      <button class="usagi-btn" id="usagiBtn" type="button" aria-label="A little rabbit is peeking out. Tap to say hello.">
+        <span class="usagi-clip">
+          <svg class="usagi-body" viewBox="0 0 64 84" aria-hidden="true">
+            <g class="ears">
+              <ellipse class="ear-l" cx="23" cy="20" rx="6.4" ry="17" fill="#fbf3ec" stroke="#6b4a3e" stroke-width="1" transform="rotate(-10 23 34)"/>
+              <ellipse cx="23" cy="21" rx="3" ry="12" fill="#f0b8b8" transform="rotate(-10 23 34)"/>
+              <ellipse class="ear-r" cx="41" cy="20" rx="6.4" ry="17" fill="#fbf3ec" stroke="#6b4a3e" stroke-width="1" transform="rotate(10 41 34)"/>
+              <ellipse cx="41" cy="21" rx="3" ry="12" fill="#f0b8b8" transform="rotate(10 41 34)"/>
+            </g>
+            <ellipse cx="32" cy="72" rx="23" ry="14" fill="#fbf3ec" stroke="#6b4a3e" stroke-width="1"/>
+            <ellipse cx="32" cy="50" rx="20" ry="17" fill="#fbf3ec" stroke="#6b4a3e" stroke-width="1"/>
+            <circle cx="25" cy="48" r="1.9" fill="#4a3028"/>
+            <circle cx="39" cy="48" r="1.9" fill="#4a3028"/>
+            <ellipse cx="20" cy="54" rx="3.4" ry="2" fill="#efa3a3" opacity=".6"/>
+            <ellipse cx="44" cy="54" rx="3.4" ry="2" fill="#efa3a3" opacity=".6"/>
+            <path d="M30.6 53L32 54.4 33.4 53M32 54.4V56M29.6 57C30.8 58 33.2 58 34.4 57" fill="none" stroke="#6b4a3e" stroke-width=".9" stroke-linecap="round"/>
+            <use href="#sakura" x="38" y="28" width="11" height="11" style="color:#e9a0a8"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </footer>
+</main>
+
+<script src="script.js" defer></script>
+</body>
+</html>
